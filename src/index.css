@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Font Size: 10px */
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Lexend', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #555;
+  overflow-x: hidden;
+}
+
+input,
+button,
+textarea,
+select {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #aaa;
+}
+
+.body--fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+.container {
+  max-width: 130rem;
+  margin: 4.8rem auto 9.6rem;
+  padding: 0 2.4rem;
+}
+
+.heading,
+.heading-primary,
+.heading-secondary,
+.heading-ternary,
+.heading-quaternary {
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 3.2rem;
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+.heading-secondary {
+  font-size: 3.6rem;
+}
+
+.heading-ternary {
+  font-size: 3rem;
+}
+
+.heading-quaternary {
+  font-size: 2.4rem;
+}
+
+.grid {
+  display: grid;
+  row-gap: 1.2rem;
+  column-gap: 2.4rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--menu {
+  grid-template-columns: 1fr 45rem;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 1.2rem 1.6rem;
+  border: none;
+  border-radius: 9px;
+  background-color: #44911b;
+  color: #fff;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btn:active {
+  background-color: #367416;
+}
+
+.btn--disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: #7cb25f;
+}
+
+.link:link,
+.link:visited {
+  color: #f97474;
+  text-decoration: none;
+  border-bottom: 1px solid #f97474;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  border-bottom: 1px solid transparent;
+}
+
+/*  */
+/* MEDIA QUERIES */
+/*  */
+
+/* For Hover State of btn */
+@media (hover: hover) {
+  .btn:hover {
+    background-color: #367416;
+  }
+}
+
+/* 1344px */
+@media (max-width: 84em) {
+  .container {
+    max-width: 120rem;
+  }
+}
+
+/* 1200px */
+@media (max-width: 75em) {
+  html {
+    /* Font-size: 9px */
+    font-size: 56.25%;
+  }
+}
+
+/* 992px */
+@media (max-width: 62em) {
+  html {
+    /* Font-size: 8px */
+    font-size: 50%;
+  }
+
+  .container {
+    padding: 0 3.2rem;
+  }
+
+  .grid--4-cols,
+  .grid--3-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid--menu {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    padding: 1.6rem;
+  }
+}
+
+/* 768px */
+@media (max-width: 48em) {
+  .btn {
+    padding: 1.8rem 1.6rem;
+  }
+}
+
+/* 576px */
+@media (max-width: 36em) {
+  .heading-secondary {
+    font-size: 3.4rem;
+  }
+
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/

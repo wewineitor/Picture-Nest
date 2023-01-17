@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "baseUrl": "src",
+        "target": "ES2022",
+        "paths": {
+            "@/views/*": ["src/views/*"],
+        }
+    },
+    "include": ["src"]
+}
